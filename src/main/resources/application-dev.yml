@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/request404?serverTimezone=UTC
+
+  redis:
+    host: 127.0.0.1
+#    password: #redis 密码
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: on
+
+jwt:
+  # 密匙Key
+  secret: Request404@Jwt
+  # 配置白名单（不需要认证）
+  antMatchers: /user/account/**, /static/**
